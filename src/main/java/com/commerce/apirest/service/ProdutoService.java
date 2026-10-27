@@ -115,8 +115,8 @@ public class ProdutoService {
 
 		var idsProduto = produtos.stream().map(Produto::getId).toList();
 		var imagensPorProduto = new HashMap<UUID, ProdutoImagem>();
-		// Uma única consulta traz as imagens da página/lista; se houver mais de uma,
-		// a ordenação garante que a imagem mais recente seja apresentada.
+
+
 		for (var imagem : produtoImagemRepository.findByProdutoIdInOrderByCriadoEmDesc(idsProduto)) {
 			imagensPorProduto.putIfAbsent(imagem.getProduto().getId(), imagem);
 		}

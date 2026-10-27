@@ -61,7 +61,7 @@ public class SecurityConfig {
                 .build();
     }
 
-    /** Valida o token e carrega o perfil atual do usuário no banco. */
+
     private static final class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         private final TokenService tokenService;

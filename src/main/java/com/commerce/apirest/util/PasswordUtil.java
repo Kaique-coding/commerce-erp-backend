@@ -2,7 +2,7 @@ package com.commerce.apirest.util;
 
 import java.security.SecureRandom;
 
-/** Gera senhas temporárias aleatórias para contas sem senha informada. */
+
 public final class PasswordUtil {
 
     private static final SecureRandom RANDOM = new SecureRandom();
@@ -16,7 +16,7 @@ public final class PasswordUtil {
     private PasswordUtil() {
     }
 
-    /** Gera uma senha de 20 caracteres com maiúscula, minúscula, número e símbolo. */
+
     public static String gerarSenha() {
         char[] senha = new char[TAMANHO_SENHA];
         senha[0] = sortear(MAIUSCULAS);
@@ -28,7 +28,7 @@ public final class PasswordUtil {
             senha[i] = sortear(TODOS_CARACTERES);
         }
 
-        // Embaralha para que as categorias não ocupem posições previsíveis.
+
         for (int i = senha.length - 1; i > 0; i--) {
             int indice = RANDOM.nextInt(i + 1);
             char temporario = senha[i];

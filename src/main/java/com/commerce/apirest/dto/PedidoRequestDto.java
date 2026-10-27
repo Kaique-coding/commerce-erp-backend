@@ -17,7 +17,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PedidoRequestDto {
 
-	/** Obrigatório para usuário interno; cliente autenticado usa a própria conta. */
+
 	private UUID clienteId;
 
 	@NotNull(message = "Informe a forma de pagamento.")

@@ -42,7 +42,7 @@ public class LoginService {
 				}
 				boolean notificacaoBoasVindas;
 				if (conta.getPerfilUsuario() == PerfilUsuario.CLIENTE) {
-					// O campo novo permite entregar uma única boas-vindas também a clientes antigos.
+
 					notificacaoBoasVindas = !Boolean.TRUE.equals(conta.getNotificacaoBoasVindasExibida());
 					if (notificacaoBoasVindas) {
 						conta.setNotificacaoBoasVindasExibida(true);
